@@ -7,4 +7,5 @@ const authenticate = require('../middleware/authenticate.js')
 
 router.get('/',authenticate,productController.getAllProduct)
 router.get("/id/:id",authenticate,productController.findProductById)
+router.delete("/delete/:id",authenticate,productController.deleteProduct)
 module.exports=router

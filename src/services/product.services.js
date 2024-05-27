@@ -100,7 +100,7 @@ async function getAllProduct(reqQuery) {
     query.query.where("sizes.name").in([...sizesSet]);
   }
   if (minPrice && maxPrice) {
-    query = await query.where("discountedPrice").gte(minPrice).lte(maxPrice);
+    query =  query.where("discountedPrice").gte(minPrice).lte(maxPrice);
   }
   if (minDiscount) {
     query = query.where("discountPersent").gt(minDiscount);
