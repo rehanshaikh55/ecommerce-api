@@ -1,0 +1,3 @@
+shaikhrehan1016
+aqSNjFfoS6MJDw5l
+mongodb+srv://shaikhrehan1016:<password>@cluster0.ggnmmhh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0

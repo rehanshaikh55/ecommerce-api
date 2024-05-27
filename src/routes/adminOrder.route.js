@@ -1,0 +1,15 @@
+const express = require('express')
+
+const router = express.Router()
+
+const adminOrderController=require("../controller/adminOrder.controller.js")
+const authenticate = require('../middleware/authenticate.js')
+
+router.get("/",authenticate,adminOrderController.getAllOrders)
+router.put("/:orderId/confirmed",authenticate,adminOrderController.confirmedOrders)
+router.put("/:orderId/shipped",authenticate,adminOrderController.shippOrders)
+router.put("/:orderId/delete",authenticate,adminOrderController.deleteOrders)
+router.put("/:orderId/deliver",authenticate,adminOrderController.deliverOrders)
+router.put("/:orderId/cancel",authenticate,adminOrderController.cancelledOrders)
+
+module.exports=router;
